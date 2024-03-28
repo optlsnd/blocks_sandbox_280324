@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="menu">
+      <a href="/blocks_old.html">Blocks 0.24.0</a>
+      <a href="/blocks_new.html">Blocks 0.36.0</a>
+    </nav>
+    <div style="display: flex; justify-content: center; padding: 3rem">
+      <lr-config
+        ctx-name="my-uploader"
+        pubkey="demopublickey"
+        source-list="local"
+      ></lr-config>
+      <lr-file-uploader-regular
+        css-src="https://cdn.jsdelivr.net/npm/@uploadcare/blocks@0.36.0/web/lr-file-uploader-regular.min.css"
+        ctx-name="my-uploader"
+      >
+      </lr-file-uploader-regular>
+    </div>
+    <script type="module">
+      import * as LR from 'https://cdn.jsdelivr.net/npm/@uploadcare/blocks@0.36.0/web/blocks.min.js';
+
+      LR.registerBlocks(LR);
+    </script>
+  </body>
+</html>

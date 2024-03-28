@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      lr-file-uploader-regular {
+        --cfg-pubkey: 'demopublickey';
+        --ctx-name: 'DEFAULT_CTX';
+        --darkmode: 0;
+        --cfg-multiple: 0;
+        --cfg-source-list: 'local';
+
+        --l10n-upload-file: 'Upload photo';
+        --l10n-upload-files: 'Upload photos';
+
+        --l10n-src-type-local: 'Upload from Device';
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="menu">
+      <a href="/blocks_old.html">Blocks 0.24.0</a>
+      <a href="/blocks_new.html">Blocks 0.36.0</a>
+    </nav>
+    <div style="display: flex; justify-content: center; padding: 3rem">
+      <lr-file-uploader-regular
+        css-src="uploader_old_styles.css"
+        class="my-uploader"
+      >
+      </lr-file-uploader-regular>
+    </div>
+    <script type="module">
+      import * as LR from 'https://cdn.jsdelivr.net/npm/@uploadcare/blocks@0.24.2/web/blocks.min.js';
+
+      LR.registerBlocks(LR);
+    </script>
+  </body>
+</html>
